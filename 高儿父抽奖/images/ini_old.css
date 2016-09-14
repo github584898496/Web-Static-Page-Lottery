@@ -1,0 +1,11 @@
+﻿body {
+  text-align:center;
+  background-color:#ccc;
+}
+.OFF {
+    display:none;  
+}
+.oneOut {
+  border:1px solid #f00;
+  padding:5px;
+}

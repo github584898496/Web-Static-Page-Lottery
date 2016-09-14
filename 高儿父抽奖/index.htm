@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta name="Generator" content="Arc WebSoft" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>抽奖程序</title>
+<link href="./images/ini.css" rel="stylesheet" type="text/css" />
+<script src="./images/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="images/co.js"></script>
+<script type="text/JavaScript">  
+      //====  参数配置区域 ↓ ================================================================
+        var m      = [];//按号码范围抽 m_name必须为[];
+        var m_name =new Array();
+        for(var i=0;i<200;i++)
+        {
+          m_name.push('张三'+i.toString());
+        }
+
+
+        /**
+	    奖项配置及样式关系设置
+	      name:  本组奖项名称
+	      num:   本组要抽出的数量
+	      clas：对应的样式 ini.css 内（默认 class="ipt"）
+	    */
+        window.ini = [
+          { name: "五等奖（10名）", num: 10, clas: "ipt5" },
+          { name: "四等奖（8名）", num: 8, clas: "ipt5" },
+	      { name: "三等奖（6名）", num: 6, clas: "ipt5" },
+	      {name : "二等奖（4名）",num:4,clas:"ipt2"},
+	      { name: "一等奖（2名）", num: 2, clas: "ipt1" }
+        ];
+	
+	    /** 辅助参数设置 */
+	    window.rep = 0; //是否允许号码重复出现
+	    window.obo = 1; //一次抽一（组0/个1）
+	    window.arr = []; //排除号码或姓名序号 例子 [0,1,2,3,4]   
+</script>
+
+    <script type="text/javascript">
+        $(function () {
+            var $micHtml = "<embed id='bgSound' src='./Music/bg1.mp3' hidden='true' autostart='true' loop='true'>";
+            $("#btnMisic").toggle(function () {
+                $("#bgDiv").html("")
+                $(this).val("开始音乐");
+            }, function () {
+                $("#bgDiv").html("").append($micHtml);
+                $(this).val("停止音乐");
+            });
+        })
+    </script>
+</head>
+<body  scroll="no">
+	<div class="warp">      
+        <div class="OFF" title="关闭本程序">关闭</div>
+        <div class="Top">
+            <div id="Go">
+                <fieldset class="MainBG">
+                    <div id="Main"><h2 class="title">加载奖项...</h2>
+                        <div class="input">列表加载...</div>
+                    </div>
+                    <div id="input">
+                        <input id="start" name="start" type="button" value="开始抽奖"/>
+                        <input id="end" name="end" type="button" value="停止滚动" />
+                        <input id="login" name="login" type="button" value="下一组(回车)" />
+                        <input id='btnMisic' type='button' value='停止音乐' />
+                    </div>
+                </fieldset>
+            </div>
+            <div id="out">
+                <fieldset>
+                    <legend style="font-size:30px; text-align:center;"> 中奖结果 </legend>
+                    <ul id="tableOUT">
+                        <li style="display:none;" />
+                    </ul>
+                </fieldset>
+            </div>
+        </div>
+        <div class="End" align="left">        	
+            <ul>
+            	<li></li>
+            </ul>
+        </div>
+        <div class="footer">
+        	<p><span>一等奖：</span>韩国济州岛高尔夫球旅游路线（价值￥10,000）</p>
+            <p><span>二等奖：</span>北美线路旅游礼金券（价值￥5,000）</p>
+            <p><span>三等奖：</span>嘉实多机油（价值￥1,500）</p>
+            <p><span>四等奖：</span>BMW Lifestyle T恤</p>
+            <p><span>五等奖：</span>BMW原装U盘</p>
+        </div>
+	</div> 
+
+   <div id="bgDiv">
+       <!-- 背景音乐1 --> 
+   <embed id='bgSound' src='./Music/bg1.mp3' hidden='true' autostart='true' loop='true'>  
+   </div>
+</body>
+</html>
+
+

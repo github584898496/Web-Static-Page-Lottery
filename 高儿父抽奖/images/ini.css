@@ -1,0 +1,83 @@
+﻿body {
+    background:url(bg.jpg) no-repeat top center #DCE0E3;
+}
+ul{
+	text-decoration:none;
+}
+li{
+	list-style-type:none;
+}
+#Go{
+	text-align:center;
+}
+h2{
+	font-size:30px;
+}
+.input .ipt{
+	width:140px;
+	height:35px;
+	margin-left:5px;
+	margin-top:5px;
+}
+#start,#end,#login,#btnMisic{
+	width:150px;
+	height:40px;
+	margin-top:10px;
+}
+.warp{
+	padding:0px;
+	margin:0px;
+	width:50%;
+	margin:0 auto;
+}
+.End{
+	width:100%;
+	border:1px solid #999;
+}
+.End ul{
+	width:95%;
+	margin-left:-40px;
+}
+.End li{
+	width:95%;
+	font-size:16px;
+	padding-left:20px;
+	font-weight:normal;
+	font-family:"微软雅黑", "宋体", Arial;
+}
+.OFF {
+    display:none;  
+}
+.oneOut {
+    padding:5px;
+}
+#out{
+	width:100%;
+}
+#out ul{
+	width:95%;
+	margin:0 auto;
+	text-decoration:none;
+}
+#out ul li{
+	width:100%;
+	margin-left:-40px;
+	list-style:none;
+	font-size:16px;
+	text-align:left;
+	font-family:"微软雅黑", "宋体", Arial;
+}
+.footer{
+	width:100%;
+	border:1px solid #999;
+}
+.footer p{
+	text-align:left;
+	padding-left:20px;
+	font-size:16px;
+	font-weight:normal;
+	font-family:"微软雅黑", "宋体", Arial;
+}
+.footer span{
+	width:100px;
+}
